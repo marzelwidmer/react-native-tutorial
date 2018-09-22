@@ -1,42 +1,73 @@
-import React, {Component} from 'react'
-import {View} from 'react-native'
-import PresentationalComponent from './PresentationalComponent'
+import React, { Component } from 'react'
+import { Text, View, StyleSheet } from 'react-native'
 
-class Home extends Component {
-    state = {
-        myState: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Ut enim ad   minim veniam, quis nostrud  exercitation ullamco laboris 
-         nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-         officia deserunt mollit anim id est laborum.`
-    }
-    updateState = () => this.setState({myState: 'The state is updated'})
-
-    render() {
-        return (
-            <View>
-                <PresentationalComponent myState={this.state.myState} updateState=
-                    {this.updateState}/>
+const Home = (props) =>  {
+    return (
+        <View>
+            <View style = {style.container1}>
+                <View style = {style.blackImg}/>
+                <View style = {style.yellowImg}/>
             </View>
-        )
-    }
-}
+            <View style = {style.container2}>
+                <View style = {style.blackImg}/>
+                <View style = {style.yellowImg}/>
+            </View>
 
+            <View style = {style.container3}>
+                <View style = {style.blackImg}/>
+                <View style = {style.yellowImg}/>
+            </View>
+
+            <View style = {style.container4}>
+                <View style = {style.blackImg}/>
+                <View style = {style.yellowImg}/>
+            </View>
+
+            <View style = {style.container5}>
+                <View style = {style.blackImg}/>
+                <View style = {style.yellowImg}/>
+            </View>
+        </View>
+    )
+}
 export default Home
 
-
-// EC5
-// class Home extends Component {
-//     constructor(){
-//         super()
-//         this.updateState = this.updateState.bind(this)
-//     }
-//     updateState(){
-//         //
-//     }
-//     render(){
-//         //
-//     }
-// }
+const style = StyleSheet.create ({
+    container1: {
+        borderBottomWidth: 1,
+        borderBottomColor: '#f4c842'
+    },
+    container2: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        borderBottomWidth: 1,
+        borderBottomColor: '#f4c842'
+    },
+    container3: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        borderBottomWidth: 1,
+        borderBottomColor: '#f4c842'
+    },
+    container4: {
+        alignItems: 'center',
+        borderBottomWidth: 1,
+        borderBottomColor: '#f4c842'
+    },
+    container5: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    blackImg: {
+        backgroundColor: 'black',
+        height: 90,
+        width: 90
+    },
+    yellowImg: {
+        backgroundColor: 'yellow',
+        height: 50,
+        width: 50
+    }
+})
