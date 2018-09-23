@@ -12,12 +12,6 @@
             "platform": "ios",
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/.vscode/.react"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/start"
         }
     ]
 }
