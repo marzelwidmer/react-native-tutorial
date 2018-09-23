@@ -1,14 +1,33 @@
-import React from 'react'
-import HttpExample from './HttpExample'
+import React, { Component } from "react";
+import { View, TouchableNativeFeedback, Text, StyleSheet } from 'react-native'
+
 
 const Home = () => {
-    return (
-        <HttpExample />
-    )
-}
+  const handlePress = () => false;
+  return (
+    <View style = {styles.container}>
+         <TouchableNativeFeedback>
+            <Text style = {styles.text}>
+               Button
+            </Text>
+         </TouchableNativeFeedback>
+      </View>
+  );
+};
 
-export default Home
+export default Home;
 
+const styles = StyleSheet.create ({
+    container: {
+       alignItems: 'center',
+    },
+    text: {
+       borderWidth: 1,
+       padding: 25,
+       borderColor: 'black',
+       backgroundColor: 'red'
+    }
+ })
 
 // const Home = (props) =>  {
 //     return (
@@ -39,7 +58,6 @@ export default Home
 //         </View>
 //     )
 // }
-
 
 // const style = StyleSheet.create ({
 //     container1: {
