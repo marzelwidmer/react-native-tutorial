@@ -1,26 +1,14 @@
 import React from 'react'
-import ScrollViewExample from './ScrollViewExample'
+import ImagesExample from './ImagesExample'
 
 const Home = () => {
     return (
-        <ScrollViewExample />
+        <ImagesExample />
     )
 }
 
 export default Home
 
-
-// const Home = () => {
-//     return (
-//         <Inputs />
-//     )
-// }
-
-// const Home = () => {
-//     return (
-//         <List />
-//     )
-// }
 
 
 // const Home = (props) =>  {
