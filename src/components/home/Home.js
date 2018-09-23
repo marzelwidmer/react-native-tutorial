@@ -1,11 +1,20 @@
-import React, { Component } from 'react'
-import List from './List.js'
+import React from 'react'
+import Inputs from './Inputs'
 
 const Home = () => {
     return (
-        <List />
+        <Inputs />
     )
 }
+
+export default Home
+
+
+// const Home = () => {
+//     return (
+//         <List />
+//     )
+// }
 
 
 // const Home = (props) =>  {
@@ -37,7 +46,7 @@ const Home = () => {
 //         </View>
 //     )
 // }
-export default Home
+
 
 // const style = StyleSheet.create ({
 //     container1: {
