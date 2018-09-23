@@ -1,9 +1,9 @@
 import React from 'react'
-import ImagesExample from './ImagesExample'
+import HttpExample from './HttpExample'
 
 const Home = () => {
     return (
-        <ImagesExample />
+        <HttpExample />
     )
 }
 

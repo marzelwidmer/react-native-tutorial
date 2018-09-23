@@ -1,0 +1,63 @@
+import React, {Component} from 'react'
+import {View, Text} from 'react-native'
+
+class HttpExample extends Component {
+    state = {
+        data: ''
+    }
+
+    fetchJsonplaceholder = () => {
+        fetch('https://jsonplaceholder.typicode.com/posts/1', {
+            method: 'GET'
+        })
+            .then((response) => response.json())
+            .then((responseJson) => {
+                console.log(responseJson);
+
+                this.setState({
+                    data: responseJson
+                })
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+    fetchChuckNorris = () => {
+        fetch('http://api.icndb.com/jokes/random', {
+            method: 'GET'
+        })
+            .then((response) => response.json())
+            .then((responseJson) => {
+                console.log(responseJson);
+
+                this.setState({
+                    data: responseJson
+                })
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+    componentDidMount = () => {
+        this.fetchJsonplaceholder()
+        // this.fetchChuckNorris()
+    }
+
+
+
+
+
+
+
+    render() {
+        return (
+            <View>
+                <Text>
+                    {this.state.data.body}
+                </Text>
+            </View>
+        )
+    }
+}
+
+export default HttpExample
