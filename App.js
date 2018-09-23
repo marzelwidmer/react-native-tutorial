@@ -1,13 +1,10 @@
-import React, {Component} from 'react'
-import {View} from 'react-native'
-import Home from './src/components/home/Home.js'
+import React, { Component } from "react";
+import { AppRegistry } from "react-native";
+import Routes from "./src/components/routes/Routes";
 
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
-    return (
-        <View>
-            <Home/>
-        </View>
-    )
+    return <Routes />;
   }
 }
+AppRegistry.registerComponent("reactTutorialApp", () => reactTutorialApp);
