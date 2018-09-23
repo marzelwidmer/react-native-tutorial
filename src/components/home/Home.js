@@ -10,7 +10,6 @@ const Home = () => {
 export default Home
 
 
-
 // const Home = (props) =>  {
 //     return (
 //         <View>
