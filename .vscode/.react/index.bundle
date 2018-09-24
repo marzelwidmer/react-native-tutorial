@@ -1807,7 +1807,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,510,658],"index.js");
+},0,[1,510,660],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -81919,6 +81919,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _About = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "../about/About"));
 
+  var _GeolocationExample = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "../home/GeolocationExample"));
+
   var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/routes/Routes.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -81929,13 +81931,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       titleStyle: styles.navTitle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 12
       }
     }, _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "root",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 13
       }
     }, _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "home",
@@ -81945,7 +81947,16 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       leftButtonIconStyle: styles.backButton,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 14
+      }
+    }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
+      key: "geolocationExample",
+      component: _GeolocationExample.default,
+      title: "GeolocationExample",
+      leftButtonIconStyle: styles.backButton,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
       }
     }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "webViewExample",
@@ -81954,7 +81965,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       leftButtonIconStyle: styles.backButton,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 27
       }
     }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "settingsContainer",
@@ -81963,7 +81974,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       leftButtonIconStyle: styles.backButton,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 33
       }
     }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "about",
@@ -81975,7 +81986,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       title: "About",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 39
       }
     })));
   };
@@ -81994,7 +82005,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       color: "#FF3B30"
     }
   });
-},511,[29,1,512,655,656,660,657],"src/components/routes/Routes.js");
+},511,[29,1,512,655,656,657,659,661],"src/components/routes/Routes.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -104533,9 +104544,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+  var showAlert = function showAlert() {
+    _reactNative.Alert.alert("You need to...");
+  };
+
   var Home = function Home() {
     var goToAbout = function goToAbout() {
       _reactNativeRouterFlux.Actions.about();
+    };
+
+    var goToGeolocationExample = function goToGeolocationExample() {
+      _reactNativeRouterFlux.Actions.geolocationExample();
     };
 
     var gotToWebViewExample = function gotToWebViewExample() {
@@ -104550,30 +104569,30 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       style: styles.container2,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 30
       }
     }, _react.default.createElement(_reactNative.StatusBar, {
       barStyle: "light-content",
       hidden: false,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 31
       }
     }), _react.default.createElement(_reactNative.View, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 33
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.welcome,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 34
       }
     }, "Welcome ...")), _react.default.createElement(_reactNative.View, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 36
       }
     }, _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
@@ -104582,13 +104601,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       onPress: goToAbout,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 37
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.home,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 38
       }
     }, "This is HOME!")), _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
@@ -104597,13 +104616,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       onPress: gotToWebViewExample,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 40
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.webView,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 41
       }
     }, "WebViewExample")), _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
@@ -104612,55 +104631,83 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       onPress: gotToSettingsContainer,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 43
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.webView,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 47
       }
     }, "SettingsContainer"))), _react.default.createElement(_reactNative.Text, {
       style: styles.text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 51
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.capitalLetter,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 52
       }
     }, "L"), _react.default.createElement(_reactNative.Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 54
       }
     }, "orem ipsum dolor sit amet, sed do eiusmod."), _react.default.createElement(_reactNative.Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 56
       }
     }, "Ut enim ad ", _react.default.createElement(_reactNative.Text, {
-      style: styles.i,
+      style: styles.wordBold,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 57
       }
     }, "minim "), " veniam, quis aliquip ex ea commodo consequat."), _react.default.createElement(_reactNative.Text, {
       style: styles.italicText,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 61
       }
     }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."), _react.default.createElement(_reactNative.Text, {
       style: styles.textShadow,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 65
       }
-    }, "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")));
+    }, "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")), _react.default.createElement(_reactNative.TouchableOpacity, {
+      onPress: showAlert,
+      style: styles.button,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      style: styles.italicText,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      }
+    }, "Alert")), _react.default.createElement(_reactNative.TouchableOpacity, {
+      style: {
+        margin: 10
+      },
+      onPress: goToGeolocationExample,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 75
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      style: styles.webView,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      }
+    }, "GeolocationExample")));
   };
 
   var _default = Home;
@@ -104765,75 +104812,6 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
 },656,[29,512,1],"src/components/webView/WebViewExample.js");
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-
-  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
-
-  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
-
-  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
-
-  var _this = this,
-      _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/about/About.js";
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  var About = function About() {
-    var goToHome = function goToHome() {
-      _reactNativeRouterFlux.Actions.home();
-    };
-
-    toggleSwitch1 = function toggleSwitch1(value) {
-      _this.setState({
-        switch1Value: value
-      });
-
-      console.log("Switch 1 is: " + value);
-    };
-
-    toggleSwitch2 = function toggleSwitch2(value) {
-      _this.setState({
-        switch2Value: value
-      });
-
-      console.log("Switch 2 is: " + value);
-    };
-
-    return _react.default.createElement(_reactNative.View, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      }
-    }, _react.default.createElement(_reactNative.TouchableOpacity, {
-      style: {
-        margin: 128
-      },
-      onPress: goToHome,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      }
-    }, _react.default.createElement(_reactNative.Text, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21
-      }
-    }, "This is ABOUT")));
-  };
-
-  var _default = About;
-  exports.default = _default;
-},657,[29,1,512],"src/components/about/About.js");
-__d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
-  module.exports = {
-  "name": "reactTutorialApp",
-  "displayName": "reactTutorialApp"
-};
-},658,[],"app.json");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -104949,7 +104927,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _default2 = SettingsContainer;
   exports.default = _default2;
-},660,[29,153,1,661],"src/components/settings/SettingsContainer.js");
+},657,[29,153,1,658],"src/components/settings/SettingsContainer.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -104997,7 +104975,234 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       marginTop: 100
     }
   });
-},661,[29,1],"src/components/settings/SwitchExample.js");
+},658,[29,1],"src/components/settings/SwitchExample.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
+
+  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
+
+  var _this = this,
+      _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/about/About.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var About = function About() {
+    var goToHome = function goToHome() {
+      _reactNativeRouterFlux.Actions.home();
+    };
+
+    toggleSwitch1 = function toggleSwitch1(value) {
+      _this.setState({
+        switch1Value: value
+      });
+
+      console.log("Switch 1 is: " + value);
+    };
+
+    toggleSwitch2 = function toggleSwitch2(value) {
+      _this.setState({
+        switch2Value: value
+      });
+
+      console.log("Switch 2 is: " + value);
+    };
+
+    return _react.default.createElement(_reactNative.View, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      }
+    }, _react.default.createElement(_reactNative.TouchableOpacity, {
+      style: {
+        margin: 128
+      },
+      onPress: goToHome,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      }
+    }, "This is ABOUT")));
+  };
+
+  var _default = About;
+  exports.default = _default;
+},659,[29,1,512],"src/components/about/About.js");
+__d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
+  module.exports = {
+  "name": "reactTutorialApp",
+  "displayName": "reactTutorialApp"
+};
+},660,[],"app.json");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/home/GeolocationExample.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+  var _components = {
+    GeolocationExample: {
+      displayName: "GeolocationExample"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/home/GeolocationExample.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var GeolocationExample = function (_Component) {
+    _inherits(GeolocationExample, _Component);
+
+    function GeolocationExample() {
+      var _getPrototypeOf2;
+
+      var _this;
+
+      _classCallCheck(this, GeolocationExample);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(GeolocationExample)).call.apply(_getPrototypeOf2, [this].concat(args)));
+      _this.state = {
+        initialPosition: 'unknown',
+        lastPosition: 'unknown'
+      };
+      _this.watchID = null;
+
+      _this.componentDidMount = function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          var initialPosition = JSON.stringify(position);
+
+          _this.setState({
+            initialPosition: initialPosition
+          });
+        }, function (error) {
+          return alert(error.message);
+        }, {
+          enableHighAccuracy: true,
+          timeout: 20000,
+          maximumAge: 1000
+        });
+        _this.watchID = navigator.geolocation.watchPosition(function (position) {
+          var lastPosition = JSON.stringify(position);
+
+          _this.setState({
+            lastPosition: lastPosition
+          });
+        });
+      };
+
+      _this.componentWillUnmount = function () {
+        navigator.geolocation.clearWatch(_this.watchID);
+      };
+
+      return _this;
+    }
+
+    _createClass(GeolocationExample, [{
+      key: "render",
+      value: function render() {
+        return _react.default.createElement(_reactNative.View, {
+          style: styles.container,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          style: styles.boldText,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          }
+        }, "Initial position:"), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          }
+        }, this.state.initialPosition), _react.default.createElement(_reactNative.Text, {
+          style: styles.boldText,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          }
+        }, "Current position:"), _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          }
+        }, this.state.lastPosition));
+      }
+    }]);
+
+    return GeolocationExample;
+  }(_react.Component);
+
+  GeolocationExample = _wrapComponent("GeolocationExample")(GeolocationExample);
+  var _default2 = GeolocationExample;
+  exports.default = _default2;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      marginTop: 50
+    },
+    boldText: {
+      fontSize: 30,
+      color: 'red'
+    }
+  });
+},661,[29,153,1],"src/components/home/GeolocationExample.js");
 __r(66);
 __r(0);
 //# sourceMappingURL=index.map

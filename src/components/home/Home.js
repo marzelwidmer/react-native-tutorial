@@ -4,13 +4,21 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
-  Text
+  Text,
+  Alert
 } from "react-native";
 import { Actions } from "react-native-router-flux";
+
+const showAlert = () => {
+  Alert.alert("You need to...");
+};
 
 const Home = () => {
   const goToAbout = () => {
     Actions.about();
+  };
+  const goToGeolocationExample = () => {
+    Actions.geolocationExample();
   };
   const gotToWebViewExample = () => {
     Actions.webViewExample();
@@ -40,29 +48,36 @@ const Home = () => {
         </TouchableOpacity>
       </View>
 
-       <Text style = {styles.text}>
-            <Text style = {styles.capitalLetter}>
-               L
-            </Text>
-				
-            <Text>
-               orem ipsum dolor sit amet, sed do eiusmod.
-            </Text>
+      <Text style={styles.text}>
+        <Text style={styles.capitalLetter}>L</Text>
 
-            <Text>
-               Ut enim ad <Text style = {styles.wordBold}>minim </Text> veniam,
-               quis aliquip ex ea commodo consequat.
-            </Text>
+        <Text>orem ipsum dolor sit amet, sed do eiusmod.</Text>
 
-            <Text style = {styles.italicText}>
-               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-            </Text>
+        <Text>
+          Ut enim ad <Text style={styles.wordBold}>minim </Text> veniam, quis
+          aliquip ex ea commodo consequat.
+        </Text>
 
-            <Text style = {styles.textShadow}>
-               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-               deserunt mollit anim id est laborum.
-            </Text>
-         </Text>
+        <Text style={styles.italicText}>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+        </Text>
+
+        <Text style={styles.textShadow}>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+        </Text>
+      </Text>
+
+      <TouchableOpacity onPress={showAlert} style={styles.button}>
+        <Text style={styles.italicText}>Alert</Text>
+      </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{ margin: 10 }}
+          onPress={goToGeolocationExample}
+        >
+          <Text style={styles.webView}>GeolocationExample</Text>
+        </TouchableOpacity>
     </View>
   );
 };
