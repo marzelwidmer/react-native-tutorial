@@ -1,5 +1,11 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import {
+  StatusBar,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Text
+} from "react-native";
 import { Actions } from "react-native-router-flux";
 
 const Home = () => {
@@ -11,6 +17,8 @@ const Home = () => {
   };
   return (
     <View style={styles.container2}>
+      <StatusBar barStyle="light-content" hidden={false} />
+
       <View>
         <Text style={styles.welcome}>Welcome ...</Text>
       </View>
@@ -50,9 +58,8 @@ const styles = StyleSheet.create({
   },
   home: {
     color: "#424242"
-  }, 
+  },
   webView: {
     color: "#EEEEEE"
   }
 });
- 

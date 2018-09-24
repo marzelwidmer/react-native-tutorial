@@ -104532,23 +104532,30 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       style: styles.container2,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 19
       }
-    }, _react.default.createElement(_reactNative.View, {
+    }, _react.default.createElement(_reactNative.StatusBar, {
+      barStyle: "light-content",
+      hidden: false,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 20
+      }
+    }), _react.default.createElement(_reactNative.View, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.welcome,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 23
       }
     }, "Welcome ...")), _react.default.createElement(_reactNative.View, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 25
       }
     }, _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
@@ -104557,13 +104564,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       onPress: goToAbout,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 26
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.home,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 27
       }
     }, "This is HOME!")), _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
@@ -104572,13 +104579,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       onPress: gotToWebViewExample,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 29
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.webView,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 30
       }
     }, "WebViewExample"))));
   };
