@@ -20,6 +20,9 @@ const Home = () => {
   const goToGeolocationExample = () => {
     Actions.geolocationExample();
   };
+  const goToAsyncStorageExample = () => {
+    Actions.asyncStorageExample();
+  };
   const gotToWebViewExample = () => {
     Actions.webViewExample();
   };
@@ -74,9 +77,14 @@ const Home = () => {
 
         <TouchableOpacity
           style={{ margin: 10 }}
-          onPress={goToGeolocationExample}
-        >
+          onPress={goToGeolocationExample}>
           <Text style={styles.webView}>GeolocationExample</Text>
+        </TouchableOpacity>
+       
+        <TouchableOpacity
+          style={{ margin: 10 }}
+          onPress={goToAsyncStorageExample}>
+          <Text style={styles.webView}>AsyncStorageExample</Text>
         </TouchableOpacity>
     </View>
   );

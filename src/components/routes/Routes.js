@@ -7,6 +7,7 @@ import WebViewExample from "../webView/WebViewExample";
 import SettingsContainer from "../settings/SettingsContainer";
 import About from "../about/About";
 import GeolocationExample from '../home/GeolocationExample';
+import AsyncStorageExample from '../home/AsyncStorageExample';
 
 const Routes = () => (
   <Router navigationBarStyle={styles.navBar} titleStyle={styles.navTitle}>
@@ -22,6 +23,12 @@ const Routes = () => (
         key="geolocationExample"
         component={GeolocationExample}
         title="GeolocationExample"
+        leftButtonIconStyle={styles.backButton}
+      />
+       <Scene
+        key="asyncStorageExample"
+        component={AsyncStorageExample}
+        title="AsyncStorageExample"
         leftButtonIconStyle={styles.backButton}
       />
       <Scene
