@@ -1807,7 +1807,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,510,657],"index.js");
+},0,[1,510,658],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -81915,53 +81915,174 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _About = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "../about/About"));
 
+  var _reactNative = _$$_REQUIRE(_dependencyMap[5], "react-native");
+
   var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/routes/Routes.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   var Routes = function Routes() {
     return _react.default.createElement(_reactNativeRouterFlux.Router, {
+      navigationBarStyle: styles.navBar,
+      titleStyle: styles.navTitle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 9
       }
     }, _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "root",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 10
       }
     }, _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "home",
       component: _Home.default,
       title: "Home",
       initial: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      }
-    }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
-      key: "webViewExample",
-      component: _WebViewExample.default,
-      title: "WebViewExample",
+      leftButtonIconStyle: styles.backButton,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 11
       }
     }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
+      key: "webViewExample",
+      component: _WebViewExample.default,
+      title: "WebViewExample",
+      leftButtonIconStyle: styles.backButton,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      }
+    }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "about",
+      backTitle: "Zrog",
+      backButtonTextStyle: styles.navTitle,
+      navBarButtonColor: "red",
+      backButtonTintColor: "red",
       component: _About.default,
       title: "About",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 24
       }
     })));
   };
 
   var _default = Routes;
   exports.default = _default;
-},511,[29,512,655,660,656],"src/components/routes/Routes.js");
+
+  var styles = _reactNative.StyleSheet.create({
+    navBar: {
+      backgroundColor: "#0D0D0D"
+    },
+    navTitle: {
+      color: "#EEEEEE"
+    }
+  });
+},511,[29,512,655,656,657,1],"src/components/routes/Routes.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(exports, "Router", {
+    enumerable: true,
+    get: function get() {
+      return _Router.default;
+    }
+  });
+  Object.defineProperty(exports, "Reducer", {
+    enumerable: true,
+    get: function get() {
+      return _Reducer.default;
+    }
+  });
+  Object.defineProperty(exports, "Scene", {
+    enumerable: true,
+    get: function get() {
+      return _Scene.default;
+    }
+  });
+  Object.defineProperty(exports, "Actions", {
+    enumerable: true,
+    get: function get() {
+      return _navigationStore.default;
+    }
+  });
+  Object.defineProperty(exports, "Modal", {
+    enumerable: true,
+    get: function get() {
+      return _Modal.default;
+    }
+  });
+  Object.defineProperty(exports, "Lightbox", {
+    enumerable: true,
+    get: function get() {
+      return _Lightbox.default;
+    }
+  });
+  Object.defineProperty(exports, "Stack", {
+    enumerable: true,
+    get: function get() {
+      return _Stack.default;
+    }
+  });
+  Object.defineProperty(exports, "Drawer", {
+    enumerable: true,
+    get: function get() {
+      return _Drawer.default;
+    }
+  });
+  Object.defineProperty(exports, "Tabs", {
+    enumerable: true,
+    get: function get() {
+      return _Tabs.default;
+    }
+  });
+  Object.defineProperty(exports, "Overlay", {
+    enumerable: true,
+    get: function get() {
+      return _Overlay.default;
+    }
+  });
+  Object.defineProperty(exports, "pathParser", {
+    enumerable: true,
+    get: function get() {
+      return _pathParser.default;
+    }
+  });
+  exports.ActionConst = void 0;
+
+  var ActionConst = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "./ActionConst"));
+
+  exports.ActionConst = ActionConst;
+
+  var _Router = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./Router"));
+
+  var _Reducer = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "./Reducer"));
+
+  var _Scene = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./Scene"));
+
+  var _navigationStore = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "./navigationStore"));
+
+  var _Modal = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./Modal"));
+
+  var _Lightbox = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "./Lightbox"));
+
+  var _Stack = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./Stack"));
+
+  var _Drawer = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./Drawer"));
+
+  var _Tabs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./Tabs"));
+
+  var _Overlay = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./Overlay"));
+
+  var _pathParser = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "./pathParser"));
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+},512,[513,514,635,643,515,644,645,654,646,647,648,652],"node_modules/react-native-router-flux/src/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -81992,6 +82113,301 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var ANDROID_BACK = 'REACT_NATIVE_ROUTER_FLUX_ANDROID_BACK';
   exports.ANDROID_BACK = ANDROID_BACK;
 },513,[],"node_modules/react-native-router-flux/src/ActionConst.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./../../react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "prop-types"));
+
+  var _navigationStore = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "./navigationStore"));
+
+  var _pathParser = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./pathParser"));
+
+  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/node_modules/react-native-router-flux/src/Router.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+  function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+  function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+  function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+  function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[typeof Symbol === "function" ? Symbol.iterator : "@@iterator"](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+  function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+  var _components = {
+    App: {
+      displayName: "App"
+    }
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "/Users/marcelwidmer/dev/git/react/reactTutorialApp/node_modules/react-native-router-flux/src/Router.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var App = function (_React$Component) {
+    _inherits(App, _React$Component);
+
+    function App() {
+      var _getPrototypeOf2;
+
+      var _this;
+
+      _classCallCheck(this, App);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(App)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+      _this.onBackPress = function () {
+        return _navigationStore.default.pop();
+      };
+
+      _this.handleDeepURL = function (e) {
+        return _this.parseDeepURL(e.url);
+      };
+
+      _this.parseDeepURL = function (url) {
+        if (!url) {
+          return;
+        }
+
+        var cleanUrl = _this.props.uriPrefix ? url.split(_this.props.uriPrefix)[1] : url;
+
+        if (!cleanUrl) {
+          return;
+        }
+
+        var allPaths = Object.values(_navigationStore.default.states).map(function (obj) {
+          return obj.path;
+        }).filter(function (path) {
+          return path;
+        });
+        var parsedPath = (0, _pathParser.default)(cleanUrl, allPaths);
+
+        if (!parsedPath) {
+          return;
+        }
+
+        var path = parsedPath.path,
+            params = parsedPath.params;
+        var actionKey = Object.entries(_navigationStore.default.states).filter(function (_ref) {
+          var _ref2 = _slicedToArray(_ref, 2),
+              value = _ref2[1];
+
+          return value.path === path;
+        }).map(function (_ref3) {
+          var _ref4 = _slicedToArray(_ref3, 1),
+              key = _ref4[0];
+
+          return key;
+        }).find(function (key) {
+          return key;
+        });
+
+        if (_this.props.onDeepLink) {
+          _this.props.onDeepLink({
+            url: url,
+            action: actionKey,
+            params: params
+          });
+        } else if (actionKey && _navigationStore.default[actionKey]) {
+          _navigationStore.default[actionKey](params);
+        }
+      };
+
+      return _this;
+    }
+
+    _createClass(App, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        var _this2 = this;
+
+        _reactNative.BackHandler.addEventListener('hardwareBackPress', this.props.backAndroidHandler || this.onBackPress);
+
+        _reactNative.Linking.getInitialURL().then(function (url) {
+          return _this2.parseDeepURL(url);
+        });
+
+        _reactNative.Linking.addEventListener('url', this.handleDeepURL);
+      }
+    }, {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        _reactNative.BackHandler.removeEventListener('hardwareBackPress', this.props.backAndroidHandler || this.onBackPress);
+
+        _reactNative.Linking.removeEventListener('url', this.handleDeepURL);
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this$props = this.props,
+            dispatch = _this$props.dispatch,
+            state = _this$props.state,
+            AppNavigator = _this$props.navigator;
+
+        if (dispatch && state) {
+          _navigationStore.default.externalDispatch = dispatch;
+          _navigationStore.default.externalState = state;
+          return _react.default.createElement(AppNavigator, {
+            dispatch: _navigationStore.default.dispatch,
+            state: _navigationStore.default.state,
+            ref: function ref(navigatorRef) {
+              _navigationStore.default.setTopLevelNavigator(navigatorRef);
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 87
+            }
+          });
+        }
+
+        return _react.default.createElement(AppNavigator, {
+          onNavigationStateChange: _navigationStore.default.onNavigationStateChange,
+          ref: function ref(navigatorRef) {
+            _navigationStore.default.setTopLevelNavigator(navigatorRef);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97
+          }
+        });
+      }
+    }]);
+
+    return App;
+  }(_react.default.Component);
+
+  App.propTypes = {
+    navigator: _propTypes.default.func,
+    backAndroidHandler: _propTypes.default.func,
+    uriPrefix: _propTypes.default.string,
+    onDeepLink: _propTypes.default.func
+  };
+  App.defaultProps = {
+    navigator: null,
+    backAndroidHandler: null,
+    uriPrefix: null,
+    onDeepLink: null
+  };
+  App = _wrapComponent("App")(App);
+
+  var Router = function Router(_ref5) {
+    var createReducer = _ref5.createReducer,
+        sceneStyle = _ref5.sceneStyle,
+        onStateChange = _ref5.onStateChange,
+        scenes = _ref5.scenes,
+        uriPrefix = _ref5.uriPrefix,
+        navigator = _ref5.navigator,
+        getSceneStyle = _ref5.getSceneStyle,
+        children = _ref5.children,
+        onDeepLink = _ref5.onDeepLink,
+        wrapBy = _ref5.wrapBy,
+        props = _objectWithoutProperties(_ref5, ["createReducer", "sceneStyle", "onStateChange", "scenes", "uriPrefix", "navigator", "getSceneStyle", "children", "onDeepLink", "wrapBy"]);
+
+    var data = _objectSpread({}, props);
+
+    if (getSceneStyle) {
+      data.cardStyle = getSceneStyle(props);
+    }
+
+    if (sceneStyle) {
+      data.cardStyle = sceneStyle;
+    }
+
+    var AppNavigator = scenes || navigator || _navigationStore.default.create(children, data, wrapBy);
+
+    _navigationStore.default.reducer = createReducer && createReducer(props);
+
+    if (onStateChange) {
+      _navigationStore.default.onStateChange = onStateChange;
+    }
+
+    return _react.default.createElement(App, _extends({}, props, {
+      onDeepLink: onDeepLink,
+      navigator: AppNavigator,
+      uriPrefix: uriPrefix,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 122
+      }
+    }));
+  };
+
+  Router.propTypes = {
+    onStateChange: _propTypes.default.func,
+    scenes: _propTypes.default.func,
+    navigator: _propTypes.default.func,
+    wrapBy: _propTypes.default.func,
+    getSceneStyle: _propTypes.default.func,
+    sceneStyle: _reactNative.ViewPropTypes.style,
+    createReducer: _propTypes.default.func,
+    children: _propTypes.default.element,
+    uriPrefix: _propTypes.default.string,
+    onDeepLink: _propTypes.default.func
+  };
+  Router.defaultProps = {
+    onStateChange: null,
+    scenes: null,
+    navigator: null,
+    wrapBy: function wrapBy(props) {
+      return props;
+    },
+    getSceneStyle: null,
+    sceneStyle: null,
+    children: null,
+    uriPrefix: null,
+    onDeepLink: null
+  };
+  var _default2 = Router;
+  exports.default = _default2;
+},514,[29,153,1,46,515,652],"node_modules/react-native-router-flux/src/Router.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -103737,541 +104153,6 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   exports.default = _default;
 },651,[516],"node_modules/react-native-router-flux/src/createTabNavigatorHOC.js");
-__d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
-  module.exports = {
-  "name": "reactTutorialApp",
-  "displayName": "reactTutorialApp"
-};
-},657,[],"app.json");
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(exports, "Router", {
-    enumerable: true,
-    get: function get() {
-      return _Router.default;
-    }
-  });
-  Object.defineProperty(exports, "Reducer", {
-    enumerable: true,
-    get: function get() {
-      return _Reducer.default;
-    }
-  });
-  Object.defineProperty(exports, "Scene", {
-    enumerable: true,
-    get: function get() {
-      return _Scene.default;
-    }
-  });
-  Object.defineProperty(exports, "Actions", {
-    enumerable: true,
-    get: function get() {
-      return _navigationStore.default;
-    }
-  });
-  Object.defineProperty(exports, "Modal", {
-    enumerable: true,
-    get: function get() {
-      return _Modal.default;
-    }
-  });
-  Object.defineProperty(exports, "Lightbox", {
-    enumerable: true,
-    get: function get() {
-      return _Lightbox.default;
-    }
-  });
-  Object.defineProperty(exports, "Stack", {
-    enumerable: true,
-    get: function get() {
-      return _Stack.default;
-    }
-  });
-  Object.defineProperty(exports, "Drawer", {
-    enumerable: true,
-    get: function get() {
-      return _Drawer.default;
-    }
-  });
-  Object.defineProperty(exports, "Tabs", {
-    enumerable: true,
-    get: function get() {
-      return _Tabs.default;
-    }
-  });
-  Object.defineProperty(exports, "Overlay", {
-    enumerable: true,
-    get: function get() {
-      return _Overlay.default;
-    }
-  });
-  Object.defineProperty(exports, "pathParser", {
-    enumerable: true,
-    get: function get() {
-      return _pathParser.default;
-    }
-  });
-  exports.ActionConst = void 0;
-
-  var ActionConst = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "./ActionConst"));
-
-  exports.ActionConst = ActionConst;
-
-  var _Router = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./Router"));
-
-  var _Reducer = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "./Reducer"));
-
-  var _Scene = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./Scene"));
-
-  var _navigationStore = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "./navigationStore"));
-
-  var _Modal = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./Modal"));
-
-  var _Lightbox = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "./Lightbox"));
-
-  var _Stack = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./Stack"));
-
-  var _Drawer = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./Drawer"));
-
-  var _Tabs = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./Tabs"));
-
-  var _Overlay = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "./Overlay"));
-
-  var _pathParser = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "./pathParser"));
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-},512,[513,514,635,643,515,644,645,654,646,647,648,652],"node_modules/react-native-router-flux/src/index.js");
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-
-  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
-
-  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
-
-  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
-
-  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/home/Home.js";
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  var Home = function Home() {
-    var goToAbout = function goToAbout() {
-      _reactNativeRouterFlux.Actions.about();
-    };
-
-    var gotToWebViewExample = function gotToWebViewExample() {
-      _reactNativeRouterFlux.Actions.webViewExample();
-    };
-
-    return _react.default.createElement(_reactNative.View, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      }
-    }, _react.default.createElement(_reactNative.View, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14
-      }
-    }, _react.default.createElement(_reactNative.Text, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      }
-    }, "Welcome ...")), _react.default.createElement(_reactNative.View, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      }
-    }, _react.default.createElement(_reactNative.TouchableOpacity, {
-      style: {
-        margin: 10
-      },
-      onPress: goToAbout,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      }
-    }, _react.default.createElement(_reactNative.Text, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      }
-    }, "This is HOME!")), _react.default.createElement(_reactNative.TouchableOpacity, {
-      style: {
-        margin: 10
-      },
-      onPress: gotToWebViewExample,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21
-      }
-    }, _react.default.createElement(_reactNative.Text, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      }
-    }, "WebViewExample"))));
-  };
-
-  var _default = Home;
-  exports.default = _default;
-},655,[29,1,512],"src/components/home/Home.js");
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-
-  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
-
-  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
-
-  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
-
-  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/about/About.js";
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  var About = function About() {
-    var goToHome = function goToHome() {
-      _reactNativeRouterFlux.Actions.home();
-    };
-
-    return _react.default.createElement(_reactNative.TouchableOpacity, {
-      style: {
-        margin: 128
-      },
-      onPress: goToHome,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      }
-    }, _react.default.createElement(_reactNative.Text, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11
-      }
-    }, "This is ABOUT"));
-  };
-
-  var _default = About;
-  exports.default = _default;
-},656,[29,1,512],"src/components/about/About.js");
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-
-  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
-
-  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./../../react-transform-hmr/lib/index.js"));
-
-  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
-
-  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "prop-types"));
-
-  var _navigationStore = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "./navigationStore"));
-
-  var _pathParser = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./pathParser"));
-
-  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/node_modules/react-native-router-flux/src/Router.js";
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-  function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-  function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-  function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-  function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-  function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[typeof Symbol === "function" ? Symbol.iterator : "@@iterator"](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-  function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-  function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-  var _components = {
-    App: {
-      displayName: "App"
-    }
-  };
-
-  var _reactTransformHmrLibIndexJs2 = (0, _index.default)({
-    filename: "/Users/marcelwidmer/dev/git/react/reactTutorialApp/node_modules/react-native-router-flux/src/Router.js",
-    components: _components,
-    locals: [module],
-    imports: [_react.default]
-  });
-
-  function _wrapComponent(id) {
-    return function (Component) {
-      return _reactTransformHmrLibIndexJs2(Component, id);
-    };
-  }
-
-  var App = function (_React$Component) {
-    _inherits(App, _React$Component);
-
-    function App() {
-      var _getPrototypeOf2;
-
-      var _this;
-
-      _classCallCheck(this, App);
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(App)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-      _this.onBackPress = function () {
-        return _navigationStore.default.pop();
-      };
-
-      _this.handleDeepURL = function (e) {
-        return _this.parseDeepURL(e.url);
-      };
-
-      _this.parseDeepURL = function (url) {
-        if (!url) {
-          return;
-        }
-
-        var cleanUrl = _this.props.uriPrefix ? url.split(_this.props.uriPrefix)[1] : url;
-
-        if (!cleanUrl) {
-          return;
-        }
-
-        var allPaths = Object.values(_navigationStore.default.states).map(function (obj) {
-          return obj.path;
-        }).filter(function (path) {
-          return path;
-        });
-        var parsedPath = (0, _pathParser.default)(cleanUrl, allPaths);
-
-        if (!parsedPath) {
-          return;
-        }
-
-        var path = parsedPath.path,
-            params = parsedPath.params;
-        var actionKey = Object.entries(_navigationStore.default.states).filter(function (_ref) {
-          var _ref2 = _slicedToArray(_ref, 2),
-              value = _ref2[1];
-
-          return value.path === path;
-        }).map(function (_ref3) {
-          var _ref4 = _slicedToArray(_ref3, 1),
-              key = _ref4[0];
-
-          return key;
-        }).find(function (key) {
-          return key;
-        });
-
-        if (_this.props.onDeepLink) {
-          _this.props.onDeepLink({
-            url: url,
-            action: actionKey,
-            params: params
-          });
-        } else if (actionKey && _navigationStore.default[actionKey]) {
-          _navigationStore.default[actionKey](params);
-        }
-      };
-
-      return _this;
-    }
-
-    _createClass(App, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        var _this2 = this;
-
-        _reactNative.BackHandler.addEventListener('hardwareBackPress', this.props.backAndroidHandler || this.onBackPress);
-
-        _reactNative.Linking.getInitialURL().then(function (url) {
-          return _this2.parseDeepURL(url);
-        });
-
-        _reactNative.Linking.addEventListener('url', this.handleDeepURL);
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        _reactNative.BackHandler.removeEventListener('hardwareBackPress', this.props.backAndroidHandler || this.onBackPress);
-
-        _reactNative.Linking.removeEventListener('url', this.handleDeepURL);
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var _this$props = this.props,
-            dispatch = _this$props.dispatch,
-            state = _this$props.state,
-            AppNavigator = _this$props.navigator;
-
-        if (dispatch && state) {
-          _navigationStore.default.externalDispatch = dispatch;
-          _navigationStore.default.externalState = state;
-          return _react.default.createElement(AppNavigator, {
-            dispatch: _navigationStore.default.dispatch,
-            state: _navigationStore.default.state,
-            ref: function ref(navigatorRef) {
-              _navigationStore.default.setTopLevelNavigator(navigatorRef);
-            },
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 87
-            }
-          });
-        }
-
-        return _react.default.createElement(AppNavigator, {
-          onNavigationStateChange: _navigationStore.default.onNavigationStateChange,
-          ref: function ref(navigatorRef) {
-            _navigationStore.default.setTopLevelNavigator(navigatorRef);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 97
-          }
-        });
-      }
-    }]);
-
-    return App;
-  }(_react.default.Component);
-
-  App.propTypes = {
-    navigator: _propTypes.default.func,
-    backAndroidHandler: _propTypes.default.func,
-    uriPrefix: _propTypes.default.string,
-    onDeepLink: _propTypes.default.func
-  };
-  App.defaultProps = {
-    navigator: null,
-    backAndroidHandler: null,
-    uriPrefix: null,
-    onDeepLink: null
-  };
-  App = _wrapComponent("App")(App);
-
-  var Router = function Router(_ref5) {
-    var createReducer = _ref5.createReducer,
-        sceneStyle = _ref5.sceneStyle,
-        onStateChange = _ref5.onStateChange,
-        scenes = _ref5.scenes,
-        uriPrefix = _ref5.uriPrefix,
-        navigator = _ref5.navigator,
-        getSceneStyle = _ref5.getSceneStyle,
-        children = _ref5.children,
-        onDeepLink = _ref5.onDeepLink,
-        wrapBy = _ref5.wrapBy,
-        props = _objectWithoutProperties(_ref5, ["createReducer", "sceneStyle", "onStateChange", "scenes", "uriPrefix", "navigator", "getSceneStyle", "children", "onDeepLink", "wrapBy"]);
-
-    var data = _objectSpread({}, props);
-
-    if (getSceneStyle) {
-      data.cardStyle = getSceneStyle(props);
-    }
-
-    if (sceneStyle) {
-      data.cardStyle = sceneStyle;
-    }
-
-    var AppNavigator = scenes || navigator || _navigationStore.default.create(children, data, wrapBy);
-
-    _navigationStore.default.reducer = createReducer && createReducer(props);
-
-    if (onStateChange) {
-      _navigationStore.default.onStateChange = onStateChange;
-    }
-
-    return _react.default.createElement(App, _extends({}, props, {
-      onDeepLink: onDeepLink,
-      navigator: AppNavigator,
-      uriPrefix: uriPrefix,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 122
-      }
-    }));
-  };
-
-  Router.propTypes = {
-    onStateChange: _propTypes.default.func,
-    scenes: _propTypes.default.func,
-    navigator: _propTypes.default.func,
-    wrapBy: _propTypes.default.func,
-    getSceneStyle: _propTypes.default.func,
-    sceneStyle: _reactNative.ViewPropTypes.style,
-    createReducer: _propTypes.default.func,
-    children: _propTypes.default.element,
-    uriPrefix: _propTypes.default.string,
-    onDeepLink: _propTypes.default.func
-  };
-  Router.defaultProps = {
-    onStateChange: null,
-    scenes: null,
-    navigator: null,
-    wrapBy: function wrapBy(props) {
-      return props;
-    },
-    getSceneStyle: null,
-    sceneStyle: null,
-    children: null,
-    uriPrefix: null,
-    onDeepLink: null
-  };
-  var _default2 = Router;
-  exports.default = _default2;
-},514,[29,153,1,46,515,652],"node_modules/react-native-router-flux/src/Router.js");
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-
-  var _default = function _default() {
-    return null;
-  };
-
-  exports.default = _default;
-},654,[],"node_modules/react-native-router-flux/src/Stack.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -104616,6 +104497,130 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   });
   exports.default = void 0;
 
+  var _default = function _default() {
+    return null;
+  };
+
+  exports.default = _default;
+},654,[],"node_modules/react-native-router-flux/src/Stack.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
+
+  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
+
+  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/home/Home.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var Home = function Home() {
+    var goToAbout = function goToAbout() {
+      _reactNativeRouterFlux.Actions.about();
+    };
+
+    var gotToWebViewExample = function gotToWebViewExample() {
+      _reactNativeRouterFlux.Actions.webViewExample();
+    };
+
+    return _react.default.createElement(_reactNative.View, {
+      style: styles.container2,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      }
+    }, _react.default.createElement(_reactNative.View, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      style: styles.welcome,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      }
+    }, "Welcome ...")), _react.default.createElement(_reactNative.View, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      }
+    }, _react.default.createElement(_reactNative.TouchableOpacity, {
+      style: {
+        margin: 10
+      },
+      onPress: goToAbout,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      style: styles.home,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      }
+    }, "This is HOME!")), _react.default.createElement(_reactNative.TouchableOpacity, {
+      style: {
+        margin: 10
+      },
+      onPress: gotToWebViewExample,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      style: styles.webView,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      }
+    }, "WebViewExample"))));
+  };
+
+  var _default = Home;
+  exports.default = _default;
+
+  var styles = _reactNative.StyleSheet.create({
+    container2: {
+      flex: 1,
+      backgroundColor: "#0D0D0D",
+      alignItems: "center",
+      paddingTop: 130,
+      paddingHorizontal: 20
+    },
+    container: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#191919"
+    },
+    welcome: {
+      fontSize: 60,
+      textAlign: "center",
+      color: "#FAFAFA",
+      marginBottom: 5,
+      margin: 10
+    },
+    home: {
+      color: "#424242"
+    },
+    webView: {
+      color: "#EEEEEE"
+    }
+  });
+},655,[29,1,512],"src/components/home/Home.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
   var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
 
   var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[1], "react-native-router-flux");
@@ -104656,7 +104661,54 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       height: 350
     }
   });
-},660,[29,512,1],"src/components/webView/WebViewExample.js");
+},656,[29,512,1],"src/components/webView/WebViewExample.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
+
+  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
+
+  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/about/About.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var About = function About() {
+    var goToHome = function goToHome() {
+      _reactNativeRouterFlux.Actions.home();
+    };
+
+    return _react.default.createElement(_reactNative.TouchableOpacity, {
+      style: {
+        margin: 128
+      },
+      onPress: goToHome,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      }
+    }, "This is ABOUT"));
+  };
+
+  var _default = About;
+  exports.default = _default;
+},657,[29,1,512],"src/components/about/About.js");
+__d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
+  module.exports = {
+  "name": "reactTutorialApp",
+  "displayName": "reactTutorialApp"
+};
+},658,[],"app.json");
 __r(66);
 __r(0);
 //# sourceMappingURL=index.map
