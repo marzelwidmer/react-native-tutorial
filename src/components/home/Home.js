@@ -15,6 +15,9 @@ const Home = () => {
   const gotToWebViewExample = () => {
     Actions.webViewExample();
   };
+  const gotToSettingsContainer = () => {
+    Actions.settingsContainer();
+  };
   return (
     <View style={styles.container2}>
       <StatusBar barStyle="light-content" hidden={false} />
@@ -29,7 +32,37 @@ const Home = () => {
         <TouchableOpacity style={{ margin: 10 }} onPress={gotToWebViewExample}>
           <Text style={styles.webView}>WebViewExample</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={{ margin: 10 }}
+          onPress={gotToSettingsContainer}
+        >
+          <Text style={styles.webView}>SettingsContainer</Text>
+        </TouchableOpacity>
       </View>
+
+       <Text style = {styles.text}>
+            <Text style = {styles.capitalLetter}>
+               L
+            </Text>
+				
+            <Text>
+               orem ipsum dolor sit amet, sed do eiusmod.
+            </Text>
+
+            <Text>
+               Ut enim ad <Text style = {styles.wordBold}>minim </Text> veniam,
+               quis aliquip ex ea commodo consequat.
+            </Text>
+
+            <Text style = {styles.italicText}>
+               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+            </Text>
+
+            <Text style = {styles.textShadow}>
+               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+               deserunt mollit anim id est laborum.
+            </Text>
+         </Text>
     </View>
   );
 };
@@ -61,5 +94,25 @@ const styles = StyleSheet.create({
   },
   webView: {
     color: "#EEEEEE"
+  },
+  text: {
+    color: "#41cdf4"
+  },
+  capitalLetter: {
+    color: "red",
+    fontSize: 20
+  },
+  wordBold: {
+    fontWeight: "bold",
+    color: "black"
+  },
+  italicText: {
+    color: "#37859b",
+    fontStyle: "italic"
+  },
+  textShadow: {
+    textShadowColor: "red",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5
   }
 });

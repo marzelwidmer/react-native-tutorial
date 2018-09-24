@@ -81907,15 +81907,17 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[0], "react"));
 
-  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[1], "react-native-router-flux");
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
 
-  var _Home = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "../home/Home"));
+  var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
 
-  var _WebViewExample = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "../webView/WebViewExample"));
+  var _Home = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "../home/Home"));
 
-  var _About = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "../about/About"));
+  var _WebViewExample = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "../webView/WebViewExample"));
 
-  var _reactNative = _$$_REQUIRE(_dependencyMap[5], "react-native");
+  var _SettingsContainer = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "../settings/SettingsContainer"));
+
+  var _About = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "../about/About"));
 
   var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/routes/Routes.js";
 
@@ -81927,13 +81929,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       titleStyle: styles.navTitle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 11
       }
     }, _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "root",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       }
     }, _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "home",
@@ -81943,7 +81945,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       leftButtonIconStyle: styles.backButton,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       }
     }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "webViewExample",
@@ -81952,7 +81954,16 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       leftButtonIconStyle: styles.backButton,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 21
+      }
+    }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
+      key: "settingsContainer",
+      component: _SettingsContainer.default,
+      title: "SettingsContainer",
+      leftButtonIconStyle: styles.backButton,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
       }
     }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "about",
@@ -81964,7 +81975,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       title: "About",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 33
       }
     })));
   };
@@ -81983,7 +81994,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       color: "#FF3B30"
     }
   });
-},511,[29,512,655,656,657,1],"src/components/routes/Routes.js");
+},511,[29,1,512,655,656,660,657],"src/components/routes/Routes.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -104531,34 +104542,38 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       _reactNativeRouterFlux.Actions.webViewExample();
     };
 
+    var gotToSettingsContainer = function gotToSettingsContainer() {
+      _reactNativeRouterFlux.Actions.settingsContainer();
+    };
+
     return _react.default.createElement(_reactNative.View, {
       style: styles.container2,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 22
       }
     }, _react.default.createElement(_reactNative.StatusBar, {
       barStyle: "light-content",
       hidden: false,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 23
       }
     }), _react.default.createElement(_reactNative.View, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 25
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.welcome,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 26
       }
     }, "Welcome ...")), _react.default.createElement(_reactNative.View, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 28
       }
     }, _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
@@ -104567,13 +104582,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       onPress: goToAbout,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 29
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.home,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 30
       }
     }, "This is HOME!")), _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
@@ -104582,15 +104597,70 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       onPress: gotToWebViewExample,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 32
       }
     }, _react.default.createElement(_reactNative.Text, {
       style: styles.webView,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 33
       }
-    }, "WebViewExample"))));
+    }, "WebViewExample")), _react.default.createElement(_reactNative.TouchableOpacity, {
+      style: {
+        margin: 10
+      },
+      onPress: gotToSettingsContainer,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      style: styles.webView,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      }
+    }, "SettingsContainer"))), _react.default.createElement(_reactNative.Text, {
+      style: styles.text,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      style: styles.capitalLetter,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      }
+    }, "L"), _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      }
+    }, "orem ipsum dolor sit amet, sed do eiusmod."), _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      }
+    }, "Ut enim ad ", _react.default.createElement(_reactNative.Text, {
+      style: styles.i,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      }
+    }, "minim "), " veniam, quis aliquip ex ea commodo consequat."), _react.default.createElement(_reactNative.Text, {
+      style: styles.italicText,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      }
+    }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."), _react.default.createElement(_reactNative.Text, {
+      style: styles.textShadow,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      }
+    }, "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")));
   };
 
   var _default = Home;
@@ -104622,6 +104692,29 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     },
     webView: {
       color: "#EEEEEE"
+    },
+    text: {
+      color: "#41cdf4"
+    },
+    capitalLetter: {
+      color: "red",
+      fontSize: 20
+    },
+    wordBold: {
+      fontWeight: "bold",
+      color: "black"
+    },
+    italicText: {
+      color: "#37859b",
+      fontStyle: "italic"
+    },
+    textShadow: {
+      textShadowColor: "red",
+      textShadowOffset: {
+        width: 2,
+        height: 2
+      },
+      textShadowRadius: 5
     }
   });
 },655,[29,1,512],"src/components/home/Home.js");
@@ -104684,7 +104777,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNativeRouterFlux = _$$_REQUIRE(_dependencyMap[2], "react-native-router-flux");
 
-  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/about/About.js";
+  var _this = this,
+      _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/about/About.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -104693,21 +104787,42 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       _reactNativeRouterFlux.Actions.home();
     };
 
-    return _react.default.createElement(_reactNative.TouchableOpacity, {
+    toggleSwitch1 = function toggleSwitch1(value) {
+      _this.setState({
+        switch1Value: value
+      });
+
+      console.log("Switch 1 is: " + value);
+    };
+
+    toggleSwitch2 = function toggleSwitch2(value) {
+      _this.setState({
+        switch2Value: value
+      });
+
+      console.log("Switch 2 is: " + value);
+    };
+
+    return _react.default.createElement(_reactNative.View, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      }
+    }, _react.default.createElement(_reactNative.TouchableOpacity, {
       style: {
         margin: 128
       },
       onPress: goToHome,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 20
       }
     }, _react.default.createElement(_reactNative.Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 21
       }
-    }, "This is ABOUT"));
+    }, "This is ABOUT")));
   };
 
   var _default = About;
@@ -104719,6 +104834,170 @@ __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   "displayName": "reactTutorialApp"
 };
 },658,[],"app.json");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _SwitchExample = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./SwitchExample"));
+
+  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/settings/SettingsContainer.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+  var _components = {
+    SettingsContainer: {
+      displayName: "SettingsContainer"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/settings/SettingsContainer.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var SettingsContainer = _wrapComponent("SettingsContainer")(function (_Component) {
+    _inherits(SettingsContainer, _Component);
+
+    function SettingsContainer() {
+      var _this;
+
+      _classCallCheck(this, SettingsContainer);
+
+      _this = _possibleConstructorReturn(this, _getPrototypeOf(SettingsContainer).call(this));
+
+      _this.toggleSwitch1 = function (value) {
+        _this.setState({
+          switch1Value: value
+        });
+
+        console.log("Switch 1 is: " + value);
+      };
+
+      _this.toggleSwitch2 = function (value) {
+        _this.setState({
+          switch2Value: value
+        });
+
+        console.log("Switch 2 is: " + value);
+      };
+
+      _this.state = {
+        switch1Value: false,
+        switch2Value: false,
+        active: false
+      };
+      return _this;
+    }
+
+    _createClass(SettingsContainer, [{
+      key: "render",
+      value: function render() {
+        return _react.default.createElement(_reactNative.View, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        }, _react.default.createElement(_SwitchExample.default, {
+          toggleSwitch1: this.toggleSwitch1,
+          toggleSwitch2: this.toggleSwitch2,
+          switch1Value: this.state.switch1Value,
+          switch2Value: this.state.switch2Value,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26
+          }
+        }));
+      }
+    }]);
+
+    return SettingsContainer;
+  }(_react.Component));
+
+  var _default2 = SettingsContainer;
+  exports.default = _default2;
+},660,[29,153,1,661],"src/components/settings/SettingsContainer.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[0], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[1], "react-native");
+
+  var _jsxFileName = "/Users/marcelwidmer/dev/git/react/reactTutorialApp/src/components/settings/SwitchExample.js";
+
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+  var _default = SwitchExample = function SwitchExample(props) {
+    return _react.default.createElement(_reactNative.View, {
+      style: styles.container,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      }
+    }, _react.default.createElement(_reactNative.Switch, {
+      onValueChange: props.toggleSwitch1,
+      value: props.switch1Value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      }
+    }), _react.default.createElement(_reactNative.Switch, {
+      onValueChange: props.toggleSwitch2,
+      value: props.switch2Value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      }
+    }));
+  };
+
+  exports.default = _default;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      marginTop: 100
+    }
+  });
+},661,[29,1],"src/components/settings/SwitchExample.js");
 __r(66);
 __r(0);
 //# sourceMappingURL=index.map

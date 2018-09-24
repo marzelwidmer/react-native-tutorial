@@ -1,9 +1,11 @@
 import React from "react";
+import { StyleSheet } from "react-native";
 import { Router, Scene, Navigator } from "react-native-router-flux";
+
 import Home from "../home/Home";
 import WebViewExample from "../webView/WebViewExample";
+import SettingsContainer from "../settings/SettingsContainer";
 import About from "../about/About";
-import { StyleSheet } from "react-native";
 
 const Routes = () => (
   <Router navigationBarStyle={styles.navBar} titleStyle={styles.navTitle}>
@@ -15,11 +17,17 @@ const Routes = () => (
         initial={true}
         leftButtonIconStyle={styles.backButton}
       />
-      
+
       <Scene
         key="webViewExample"
         component={WebViewExample}
         title="WebViewExample"
+        leftButtonIconStyle={styles.backButton}
+      />
+      <Scene
+        key="settingsContainer"
+        component={SettingsContainer}
+        title="SettingsContainer"
         leftButtonIconStyle={styles.backButton}
       />
       <Scene
