@@ -81952,19 +81952,19 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       leftButtonIconStyle: styles.backButton,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 19
       }
     }), _react.default.createElement(_reactNativeRouterFlux.Scene, {
       key: "about",
       backTitle: "Zrog",
-      backButtonTextStyle: styles.navTitle,
-      navBarButtonColor: "red",
-      backButtonTintColor: "red",
+      backButtonTextStyle: styles.navBack,
+      navBarButtonColor: "#FF3B30",
+      backButtonTintColor: "#FF3B30",
       component: _About.default,
       title: "About",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 25
       }
     })));
   };
@@ -81978,6 +81978,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     },
     navTitle: {
       color: "#EEEEEE"
+    },
+    navBack: {
+      color: "#FF3B30"
     }
   });
 },511,[29,512,655,656,657,1],"src/components/routes/Routes.js");

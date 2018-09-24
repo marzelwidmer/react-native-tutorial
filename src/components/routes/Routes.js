@@ -15,6 +15,7 @@ const Routes = () => (
         initial={true}
         leftButtonIconStyle={styles.backButton}
       />
+      
       <Scene
         key="webViewExample"
         component={WebViewExample}
@@ -24,10 +25,9 @@ const Routes = () => (
       <Scene
         key="about"
         backTitle="Zrog"
-        backButtonTextStyle={styles.navTitle}
-
-        navBarButtonColor="red"
-        backButtonTintColor="red"
+        backButtonTextStyle={styles.navBack}
+        navBarButtonColor="#FF3B30"
+        backButtonTintColor="#FF3B30"
         component={About}
         title="About"
       />
@@ -42,5 +42,8 @@ const styles = StyleSheet.create({
   },
   navTitle: {
     color: "#EEEEEE" // changing navbar title color
+  },
+  navBack: {
+    color: "#FF3B30" // changing navbar title color
   }
 });
