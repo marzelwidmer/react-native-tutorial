@@ -23,6 +23,9 @@ const Home = () => {
   const goToAsyncStorageExample = () => {
     Actions.asyncStorageExample();
   };
+  const goToCameraExample = () => {
+    Actions.cameraExample();
+  };
   const gotToWebViewExample = () => {
     Actions.webViewExample();
   };
@@ -86,6 +89,11 @@ const Home = () => {
           onPress={goToAsyncStorageExample}>
           <Text style={styles.webView}>AsyncStorageExample</Text>
         </TouchableOpacity>
+        {/* <TouchableOpacity
+          style={{ margin: 10 }}
+          onPress={goToCameraExample}>
+          <Text style={styles.webView}>CameraExample</Text>
+        </TouchableOpacity> */}
     </View>
   );
 };
