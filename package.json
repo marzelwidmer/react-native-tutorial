@@ -12,7 +12,8 @@
     "react-native-camera": "^1.2.0",
     "react-native-http": "^0.0.3",
     "react-native-router-flux": "^4.0.1",
-    "react-native-switch": "^1.5.0"
+    "react-native-switch": "^1.5.0",
+    "rn-apple-healthkit": "^0.6.3"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
